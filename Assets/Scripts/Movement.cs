@@ -48,8 +48,8 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void AplyRotation(float rotationThisFrame)
-    {
-        transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
-    }
+    // private void AplyRotation(float rotationThisFrame)
+    // {
+    //     transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
+    // }
 }
