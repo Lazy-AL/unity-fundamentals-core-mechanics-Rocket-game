@@ -10,16 +10,16 @@ public class Movement : MonoBehaviour
     [SerializeField] float rotationStrength = 80f;
     Rigidbody rb;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    // private void Start()
+    // {
+    //     rb = GetComponent<Rigidbody>();
+    // }
 
-    private void OnEnable()
-    {
-        thrust.Enable();
-        rotation.Enable();    
-    }
+    // private void OnEnable()
+    // {
+    //     thrust.Enable();
+    //     rotation.Enable();    
+    // }
 
     private void FixedUpdate() 
     {
