@@ -52,4 +52,9 @@ public class Movement : MonoBehaviour
     {
         transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
     }
+
+        private void AplyRotation(float rotationThisFrame)
+    {
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.fixedDeltaTime);
+    }
 }
