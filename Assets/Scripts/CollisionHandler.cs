@@ -1,5 +1,6 @@
 using NUnit.Framework.Constraints;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
@@ -15,8 +16,14 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("All done");
                 break;
             default:
-                Debug.Log("Noob");
+                ReloadLevel();
                 break;
         }    
+
+        void ReloadLevel()
+        {
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentScene);
+        }
     }
 }
