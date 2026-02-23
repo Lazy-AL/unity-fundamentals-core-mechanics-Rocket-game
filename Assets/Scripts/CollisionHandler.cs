@@ -1,10 +1,9 @@
-using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    private void OllisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
         switch (other.gameObject.tag)
         {
@@ -15,21 +14,24 @@ public class CollisionHandler : MonoBehaviour
             case "Finish":
                 LoadNextLevel();
                 break;
+
             default:
                 ReloadLevel();
                 break;
-        }    
-
-        void ReloadLevel()
-        {
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentScene);
         }
 
-        void LoadNextLevel()
-        {
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentScene + 1);
-        }
+    void ReloadLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
+    }
+
+    void LoadNextLevel()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        int nextScene = currentScene + 1;
+        SceneManager.LoadScene(currentScene + 1);
+    }
+
     }
 }
