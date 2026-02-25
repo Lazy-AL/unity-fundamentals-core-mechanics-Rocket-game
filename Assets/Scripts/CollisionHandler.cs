@@ -16,7 +16,7 @@ public class CollisionHandler : MonoBehaviour
                 break;
 
             default:
-                ReloadLevel();
+                Invoke("ReloadLevel", 2f);
                 break;
         }
 
