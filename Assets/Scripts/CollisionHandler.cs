@@ -37,14 +37,14 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
-    // void StartSuccessSequence()
-    // {
-    //     isControllable = false;
-    //     audioSource.Stop();
-    //     audioSource.PlayOneShot(finish);
-    //     GetComponent<Movement>().enabled = false;
-    //     Invoke("LoadNextLevel", levelLoadDelay);
-    // }
+    void StartSuccessSequence()
+    {
+        isControllable = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(finish);
+        GetComponent<Movement>().enabled = false;
+        Invoke("LoadNextLevel", levelLoadDelay);
+    }
 
     void StartCrashSequence()
     {
