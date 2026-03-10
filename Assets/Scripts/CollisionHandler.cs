@@ -49,15 +49,15 @@ public class CollisionHandler : MonoBehaviour
         Invoke("LoadNextLevel", levelLoadDelay);
     }
 
-    // void StartCrashSequence()
-    // {
-    //     isControllable = false;
-    //     audioSource.Stop();
-    //     audioSource.PlayOneShot(playerCrashSFX);
-    //     crashParticles.Play();
-    //     GetComponent<Movement>().enabled = false;
-    //     Invoke("ReloadLevel", levelLoadDelay);
-    // }
+    void StartCrashSequence()
+    {
+        isControllable = false;
+        audioSource.Stop();
+        audioSource.PlayOneShot(playerCrashSFX);
+        crashParticles.Play();
+        GetComponent<Movement>().enabled = false;
+        Invoke("ReloadLevel", levelLoadDelay);
+    }
 
     void ReloadLevel()
     {
